@@ -1,0 +1,435 @@
+<!-- =========================================================================
+     PROJETO: PORTFÓLIO PROFISSIONAL PESSOAL
+     AUTORA: CAMILA DE CASTRO PARANHOS
+     DESCRIÇÃO: Página web utilizando HTML5 e Bootstrap 5 para apresentar perfil.
+     ========================================================================= -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Portfólio | Camila Paranhos</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/blocks.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    
+    <!-- Estilização Customizada -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <!-- BARRA DE NAVEGAÇÃO (NAVBAR OBRIGATÓRIA) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <!-- Uso do Container obrigatório do Bootstrap -->
+        <div class="container">
+            <!-- Título Principal / Logo Brand -->
+            <a class="navbar-brand d-flex flex-column" href="#inicio">
+                <span class="fw-bold text-uppercase tracking-wider text-glow">Camila Paranhos</span>
+                <small class="text-info font-monospace fs-7">Desenvolvedora Jr.</small>
+            </a>
+            <!-- Botão de colapso para responsividade móvel -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu de links de navegação -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-2 mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active rounded px-3" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded px-3" href="#sobre">Sobre Mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded px-3" href="#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded px-3" href="#formacao">Formação & Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded px-3" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SEÇÃO HERO / INÍCIO COM CAROUSEL (DESAFIO EXTRA INCLUSO) -->
+    <section id="inicio" class="pt-5 mt-4">
+        <!-- Carousel de Destaques -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- Indicadores do Carousel -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <!-- Slides de Conteúdo -->
+            <div class="carousel-inner">
+                <!-- Primeiro Slide -->
+                <div class="carousel-item active vh-100 min-vh-500 d-flex align-items-center position-relative">
+                    <div class="absolute-bg-overlay" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85));"></div>
+                    <div class="container position-relative z-index-10 text-center text-lg-start">
+                        <div class="row align-items-center py-5">
+                            <div class="col-lg-8 text-white mx-auto mx-lg-0">
+                                <h1 class="display-3 fw-extrabold text-glow mb-3 animate-fade-in">Camila Paranhos</h1>
+                                <p class="lead text-info fw-bold mb-4 fs-3">Desenvolvedora em ascensão</p>
+                                <p class="fs-5 text-light-50 mb-5 max-w-600 shadow-sm p-3 rounded bg-dark-opacity">
+                                    Transformando desafios em soluções eficientes através da programação, aliando uma base sólida em logística com foco total na inovação tecnológica.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                                    <a href="#projetos" class="btn btn-primary btn-lg px-4 py-2 shadow-lg rounded-pill"><i class="bi bi-code-slash me-2"></i>Ver Projetos</a>
+                                    <a href="#contato" class="btn btn-outline-info btn-lg px-4 py-2 rounded-pill"><i class="bi bi-chat-dots me-2"></i>Entre em Contato</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Segundo Slide -->
+                <div class="carousel-item vh-100 min-vh-500 d-flex align-items-center position-relative">
+                    <div class="absolute-bg-overlay" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));"></div>
+                    <div class="container position-relative z-index-10 text-center text-lg-start">
+                        <div class="row align-items-center py-5">
+                            <div class="col-lg-8 text-white mx-auto mx-lg-0">
+                                <h2 class="display-4 fw-extrabold text-glow mb-3">Soluções Industriais e de Software</h2>
+                                <p class="lead text-info fw-bold mb-4 fs-4">Ciência da Computação & Gestão</p>
+                                <p class="fs-5 text-light-50 mb-5 max-w-600 shadow-sm p-3 rounded bg-dark-opacity">
+                                    Foco no desenvolvimento de interfaces modernas, automação de processos logísticos e softwares estruturados com qualidade e inteligência.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                                    <a href="#formacao" class="btn btn-info btn-lg px-4 py-2 shadow-lg text-white rounded-pill"><i class="bi bi-mortarboard me-2"></i>Conhecer Formação</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles de navegação do Carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon shadow-sm rounded-circle p-3 bg-dark" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon shadow-sm rounded-circle p-3 bg-dark" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE MIM (OBRIGATÓRIA COM FOTO PESSOAL) -->
+    <section id="sobre" class="py-5 bg-section-dark text-white">
+        <!-- Grid de Container do Bootstrap -->
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-glow d-inline-block border-bottom border-info border-3 pb-2">Sobre Mim</h2>
+            </div>
+            <!-- Uso do Grid do Bootstrap (row e col) -->
+            <div class="row align-items-center g-5">
+                <!-- Coluna da Foto Pessoal -->
+                <div class="col-lg-5 text-center position-relative">
+                    <div class="profile-img-wrapper d-inline-block p-2 rounded-circle shadow-lg">
+                        <!-- Foto Pessoal apontando para a foto correta da pasta -->
+                        <img src="foto-perfil.jpg" alt="Camila Paranhos" class="img-fluid rounded-circle profile-img" style="width: 280px; height: 280px; object-fit: cover;">
+                    </div>
+                </div>
+                <!-- Coluna do Texto Descritivo -->
+                <div class="col-lg-7">
+                    <h3 class="h2 text-info mb-3">Olá, Eu sou Camila Paranhos</h3>
+                    <p class="fs-5 leading-relaxed text-justify mb-4">
+                        Sou Técnica em Logística e Tecnóloga em Gestão Ambiental. Atualmente estou cursando Bacharelado em <strong>Ciência da Computação</strong> e aperfeiçoando meus conhecimentos em Desenvolvimento de Sistemas.
+                    </p>
+                    <p class="fs-5 leading-relaxed text-justify mb-4">
+                        Com diversos projetos práticos já desenvolvidos, meu principal objetivo profissional é poder contribuir ativamente com projetos inovadores, soluções sustentáveis e o emprego de tecnologias inteligentes aplicadas tanto à indústria quanto ao benefício direto da sociedade.
+                    </p>
+                    <div class="row g-3 text-start pt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-info fs-5"></i>
+                                <span class="fs-6">Ciência da Computação</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-info fs-5"></i>
+                                <span class="fs-6">Gestão Ambiental</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-info fs-5"></i>
+                                <span class="fs-6">Técnica em Logística</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-info fs-5"></i>
+                                <span class="fs-6">Desenvolvimento Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PROJETOS (OBRIGATÓRIA COM PELO MENOS 3 CARDS E BOTÕES) -->
+    <section id="projetos" class="py-5 bg-section-light text-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-glow d-inline-block border-bottom border-info border-3 pb-2">Meus Projetos</h2>
+                <p class="text-light-50 mt-2">Aplicações práticas e soluções computacionais desenvolvidas</p>
+            </div>
+            
+            <!-- Grid com Cards do Bootstrap -->
+            <div class="row g-4 justify-content-center">
+                <!-- Card 1: Clínica Dr. JavaScript -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-card border-0 shadow-lg card-hover">
+                        <div class="position-relative overflow-hidden card-img-container">
+                            <img src="foto-projeto-clinica.jpg" class="card-img-top img-fluid" alt="Clínica Dr. JavaScript">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h4 fw-bold text-info mb-3">Clínica Dr. JavaScript</h3>
+                            <p class="card-text text-light-50 flex-grow-1 text-justify">
+                                Sistema de cadastro robusto de pacientes contendo validações completas e formulários dinâmicos inteligentes.
+                            </p>
+                            <div class="mb-4 d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">JavaScript</span>
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">HTML5</span>
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">CSS3</span>
+                            </div>
+                            <button class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Currículo em HTML -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-card border-0 shadow-lg card-hover">
+                        <div class="position-relative overflow-hidden card-img-container">
+                            <img src="foto-cv.png" class="card-img-top img-fluid" alt="Currículo em HTML">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h4 fw-bold text-info mb-3">Currículo em HTML</h3>
+                            <p class="card-text text-light-50 flex-grow-1 text-justify">
+                                Currículo estruturado e otimizado desenvolvido manualmente utilizando HTML semântico e estilizações estilizadas personalizadas.
+                            </p>
+                            <div class="mb-4 d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">HTML5</span>
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">CSS3</span>
+                            </div>
+                            <button class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Módulo de Segurança em C -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-card border-0 shadow-lg card-hover">
+                        <div class="position-relative overflow-hidden card-img-container">
+                            <img src="foto-modulo.png" class="card-img-top img-fluid" alt="Módulo de Segurança em C">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h4 fw-bold text-info mb-3">Módulo de Segurança</h3>
+                            <p class="card-text text-light-50 flex-grow-1 text-justify">
+                                Verificador completo de segurança e ergonomia operacional para postos de trabalho fabris estruturado na Linguagem C.
+                            </p>
+                            <div class="mb-4 d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">Linguagem C</span>
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">Lógica</span>
+                            </div>
+                            <button class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CURSOS, CERTIFICAÇÕES OU FORMAÇÃO + HABILIDADES (OBRIGATÓRIA) -->
+    <section id="formacao" class="py-5 bg-section-dark text-white">
+        <div class="container py-4">
+            <div class="row g-5">
+                <!-- Coluna da Esquerda: Trajetória e Formação -->
+                <div class="col-lg-6">
+                    <h3 class="h2 text-glow border-bottom border-info border-3 pb-2 mb-4"><i class="bi bi-mortarboard-fill me-2 text-info"></i>Formação Acadêmica</h3>
+                    <div class="timeline-wrapper pe-lg-3">
+                        <div class="mb-4 border-start border-info border-2 ps-3 py-1">
+                            <span class="text-info fw-bold font-monospace">Cursando</span>
+                            <h4 class="h5 fw-bold text-white mt-1">Bacharelado em Ciência da Computação</h4>
+                            <p class="text-light-50 mb-0">Ensino Superior focado em algoritmos, arquitetura de software e inteligência computacional.</p>
+                        </div>
+                        <div class="mb-4 border-start border-info border-2 ps-3 py-1">
+                            <span class="text-info fw-bold font-monospace">Concluído</span>
+                            <h4 class="h5 fw-bold text-white mt-1">Tecnologia em Gestão Ambiental</h4>
+                            <p class="text-light-50 mb-0">Formação com foco em soluções ambientais integradas, auditoria e sustentabilidade corporativa.</p>
+                        </div>
+                        <div class="mb-4 border-start border-info border-2 ps-3 py-1">
+                            <span class="text-info fw-bold font-monospace">Concluído</span>
+                            <h4 class="h5 fw-bold text-white mt-1">Técnico de Nível Médio em Logística</h4>
+                            <p class="text-light-50 mb-0">Especialização em planejamento operacional, cadeias de suprimento e gerenciamento estratégico.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coluna da Direita: Habilidades e Conhecimentos -->
+                <div class="col-lg-6">
+                    <h3 class="h2 text-glow border-bottom border-info border-3 pb-2 mb-4"><i class="bi bi-sliders me-2 text-info"></i>Habilidades & Competências</h3>
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Barra 1 -->
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold">Sistemas Integrados de Gestão (ERP)</span>
+                                <span class="text-info font-monospace fw-bold">95%</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 10px;">
+                                <div class="progress-bar bg-info rounded" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <!-- Barra 2 -->
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold">Planejamento e Controle de Produção (PCP)</span>
+                                <span class="text-info font-monospace fw-bold">90%</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 10px;">
+                                <div class="progress-bar bg-info rounded" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <!-- Barra 3 -->
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold">Linguagem C / Lógica de Programação</span>
+                                <span class="text-info font-monospace fw-bold">75%</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 10px;">
+                                <div class="progress-bar bg-info rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <!-- Barra 4 -->
+                        <div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold">Desenvolvimento Web (HTML5, CSS3, JS)</span>
+                                <span class="text-info font-monospace fw-bold">50%</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 10px;">
+                                <div class="progress-bar bg-info rounded" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FORMULÁRIO DE CONTATO (OBRIGATÓRIO COM NOME, EMAIL, MENSAGEM) -->
+    <section id="contato" class="py-5 bg-section-light text-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-glow d-inline-block border-bottom border-info border-3 pb-2">Contato</h2>
+                <p class="text-light-50 mt-2">Deseja iniciar um projeto ou trocar ideias acadêmicas? Mande uma mensagem!</p>
+            </div>
+            
+            <div class="row g-5 align-items-center">
+                <!-- Informações e Links Adicionais -->
+                <div class="col-lg-5 text-start">
+                    <div class="bg-card p-4 rounded shadow-lg border-start border-info border-4">
+                        <h3 class="h4 text-info fw-bold mb-3">Vamos Conversar!</h3>
+                        <p class="text-light-50 mb-4">Entre em contato comigo diretamente pelas redes sociais profissionais ou acesse meu currículo online interativo.</p>
+                        
+                        <!-- Lista com ícones -->
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <a href="https://www.linkedin.com/in/camilacparanhos" target="_blank" class="text-white text-decoration-none d-flex align-items-center gap-3 link-hover-effect">
+                                <i class="bi bi-linkedin fs-4 text-info"></i>
+                                <span>LinkedIn Profissional</span>
+                            </a>
+                            <a href="https://github.com/milladecastrogit" target="_blank" class="text-white text-decoration-none d-flex align-items-center gap-3 link-hover-effect">
+                                <i class="bi bi-github fs-4 text-info"></i>
+                                <span>GitHub Repository</span>
+                            </a>
+                            <a href="https://www.instagram.com/milladcastro?igsh=MThxZG5kZG91ejRncA==" target="_blank" class="text-white text-decoration-none d-flex align-items-center gap-3 link-hover-effect">
+                                <i class="bi bi-instagram fs-4 text-info"></i>
+                                <span>Instagram Pessoal</span>
+                            </a>
+                        </div>
+                        
+                        <a href="https://milladecastro1309.github.io/cv-/" target="_blank" class="btn btn-info w-100 text-white fw-bold rounded-pill shadow-sm py-2">
+                            <i class="bi bi-file-earmark-pdf me-2"></i>Acessar Currículo para Impressão
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Formulário Requerido -->
+                <div class="col-lg-7">
+                    <div class="bg-card p-4 rounded shadow-lg">
+                        <form id="contactForm" onsubmit="return handleFormSubmit(event)">
+                            <!-- Campo: Nome -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label fw-bold text-info">Nome</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-dark border-0 text-info"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control bg-dark border-0 text-white" id="name" name="name" placeholder="Seu nome completo" required>
+                                </div>
+                            </div>
+                            <!-- Campo: E-mail -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold text-info">E-mail</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-dark border-0 text-info"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control bg-dark border-0 text-white" id="email" name="email" placeholder="seuemail@provedor.com" required>
+                                </div>
+                            </div>
+                            <!-- Campo: Mensagem -->
+                            <div class="mb-4">
+                                <label for="message" class="form-label fw-bold text-info">Mensagem</label>
+                                <textarea class="form-control bg-dark border-0 text-white" id="message" name="message" rows="4" placeholder="Escreva sua mensagem profissional aqui..." required></textarea>
+                            </div>
+                            <!-- Botão de Envio OBRIGATÓRIO -->
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold text-uppercase rounded-pill shadow-lg"><i class="bi bi-send-fill me-2"></i>Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ (OBRIGATÓRIO) -->
+    <footer class="py-4 text-center text-white position-relative bg-dark border-top border-secondary">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-3 mb-3 fs-4">
+                <a href="https://www.linkedin.com/in/camilacparanhos/" target="_blank" class="text-info link-light-hover"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/milladecastrogit" target="_blank" class="text-info link-light-hover"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/milladcastro?igsh=MThxZG5kZG91ejRncA==" target="_blank" class="text-info link-light-hover"><i class="bi bi-instagram"></i></a>
+            </div>
+            <p class="mb-0 text-light-50 fs-6">&copy; 2026 Camila Paranhos. Todos os direitos reservados. | Data de Entrega do Projeto: 25/06/26.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle com Popper para interatividade completa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script Customizado JavaScript (Comentado Conforme Solicitado) -->
+    <script>
+        // Função de interceptação do formulário para demonstração profissional de frontend
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Evita o recarregamento padrão do formulário
+            
+            // Coleta de dados informados pelo usuário
+            const nome = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('message').value;
+            
+            // Alerta simulando o processamento do formulário de contato do portfólio
+            alert('Muito obrigado pelo contato, ' + nome + '! Sua mensagem foi enviada simuladamente com sucesso. Retornarei em breve no e-mail: ' + email);
+            
+            // Limpa o formulário após a submissão
+            document.getElementById('contactForm').reset();
+            return false;
+        }
+    </script>
+</body>
+</html>
