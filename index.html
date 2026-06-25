@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
     
     <!-- Estilização Customizada -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
 
@@ -133,7 +133,7 @@
                 <div class="col-lg-5 text-center position-relative">
                     <div class="profile-img-wrapper d-inline-block p-2 rounded-circle shadow-lg">
                         <!-- Foto Pessoal apontando para a foto correta da pasta -->
-                        <img src="foto-perfil.jpg" alt="Camila Paranhos" class="img-fluid rounded-circle profile-img" style="width: 280px; height: 280px; object-fit: cover;">
+                        <img src="./assets/img/foto-perfil.jpg" alt="Camila Paranhos" class="img-fluid rounded-circle profile-img" style="width: 280px; height: 280px; object-fit: cover;">
                     </div>
                 </div>
                 <!-- Coluna do Texto Descritivo -->
@@ -190,7 +190,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 bg-card border-0 shadow-lg card-hover">
                         <div class="position-relative overflow-hidden card-img-container">
-                            <img src="foto-projeto-clinica.jpg" class="card-img-top img-fluid" alt="Clínica Dr. JavaScript">
+                            <img src="./assets/img/foto-projeto-clinica.jpg" class="card-img-top img-fluid" alt="Clínica Dr. JavaScript">
                         </div>
                         <div class="card-body d-flex flex-column p-4">
                             <h3 class="card-title h4 fw-bold text-info mb-3">Clínica Dr. JavaScript</h3>
@@ -202,7 +202,7 @@
                                 <span class="badge bg-dark text-info font-monospace px-2 py-1">HTML5</span>
                                 <span class="badge bg-dark text-info font-monospace px-2 py-1">CSS3</span>
                             </div>
-                            <button class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</button>
+                            <a href="./assets/img/foto-projeto-clinica.jpg" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</a>
                         </div>
                     </div>
                 </div>
@@ -211,7 +211,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 bg-card border-0 shadow-lg card-hover">
                         <div class="position-relative overflow-hidden card-img-container">
-                            <img src="foto-cv.png" class="card-img-top img-fluid" alt="Currículo em HTML">
+                            <img src="./assets/img/foto-cv.png" class="card-img-top img-fluid" alt="Currículo em HTML">
                         </div>
                         <div class="card-body d-flex flex-column p-4">
                             <h3 class="card-title h4 fw-bold text-info mb-3">Currículo em HTML</h3>
@@ -222,7 +222,7 @@
                                 <span class="badge bg-dark text-info font-monospace px-2 py-1">HTML5</span>
                                 <span class="badge bg-dark text-info font-monospace px-2 py-1">CSS3</span>
                             </div>
-                            <button class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</button>
+                            <a href="./assets/img/foto-cv.png" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</a>
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 bg-card border-0 shadow-lg card-hover">
                         <div class="position-relative overflow-hidden card-img-container">
-                            <img src="foto-modulo.png" class="card-img-top img-fluid" alt="Módulo de Segurança em C">
+                            <img src="./assets/img/foto-modulo.png" class="card-img-top img-fluid" alt="Módulo de Segurança em C">
                         </div>
                         <div class="card-body d-flex flex-column p-4">
                             <h3 class="card-title h4 fw-bold text-info mb-3">Módulo de Segurança</h3>
@@ -242,7 +242,47 @@
                                 <span class="badge bg-dark text-info font-monospace px-2 py-1">Linguagem C</span>
                                 <span class="badge bg-dark text-info font-monospace px-2 py-1">Lógica</span>
                             </div>
-                            <button class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</button>
+                            <a href="./assets/img/foto-modulo.png" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Manutrix -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-card border-0 shadow-lg card-hover">
+                        <div class="position-relative overflow-hidden card-img-container">
+                            <img src="./assets/img/foto-manutrix.jpg" class="card-img-top img-fluid" alt="Projeto Manutrix">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h4 fw-bold text-info mb-3">Manutrix</h3>
+                            <p class="card-text text-light-50 flex-grow-1 text-justify">
+                                Projeto visual apresentado como solução para organização e acompanhamento de rotinas de manutenção.
+                            </p>
+                            <div class="mb-4 d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">Gestão</span>
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">Processos</span>
+                            </div>
+                            <a href="./assets/img/foto-manutrix.jpg" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: NutriConecta -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-card border-0 shadow-lg card-hover">
+                        <div class="position-relative overflow-hidden card-img-container">
+                            <img src="./assets/img/foto-nutriconecta.jpg" class="card-img-top img-fluid" alt="Projeto NutriConecta">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h4 fw-bold text-info mb-3">NutriConecta</h3>
+                            <p class="card-text text-light-50 flex-grow-1 text-justify">
+                                Projeto de interface voltado para conexão de informações e acompanhamento em contexto de saúde e nutrição.
+                            </p>
+                            <div class="mb-4 d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">Saúde</span>
+                                <span class="badge bg-dark text-info font-monospace px-2 py-1">Interface</span>
+                            </div>
+                            <a href="./assets/img/foto-nutriconecta.jpg" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info w-100 rounded-pill"><i class="bi bi-eye me-2"></i>Visualizar</a>
                         </div>
                     </div>
                 </div>
@@ -405,7 +445,7 @@
                 <a href="https://github.com/milladecastrogit" target="_blank" class="text-info link-light-hover"><i class="bi bi-github"></i></a>
                 <a href="https://www.instagram.com/milladcastro?igsh=MThxZG5kZG91ejRncA==" target="_blank" class="text-info link-light-hover"><i class="bi bi-instagram"></i></a>
             </div>
-            <p class="mb-0 text-light-50 fs-6">&copy; 2026 Camila Paranhos. Todos os direitos reservados. | Data de Entrega do Projeto: 25/06/26.</p>
+            <p class="mb-0 text-light-50 fs-6">&copy; 2026 Camila Paranhos. Todos os direitos reservados.</p>
         </div>
     </footer>
 

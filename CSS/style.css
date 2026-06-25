@@ -108,6 +108,24 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
+.bg-card .card-body,
+.bg-card .card-title,
+.bg-card .card-text,
+.bg-card p,
+.bg-card span {
+    color: #e2e8f0;
+}
+
+.bg-card .card-title,
+.bg-card .text-info,
+.bg-card .badge {
+    color: #5ce1ec !important;
+}
+
+.text-light-50 {
+    color: rgba(226, 232, 240, 0.82) !important;
+}
+
 .card-img-container {
     height: 200px;
     background-color: #0b111e;
